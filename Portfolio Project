@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="display=width-device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <a href="#welcome-section">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <section id="welcome-section">
+            <h1>Hi, I'm Andrew</h1>
+            <p>Web Developer</p>
+        </section>
+        <section id="projects">
+            <h1 class="projectsh1">These are some of my projects</h1>
+        <div class="grid"><div class="col">
+          <a class="pj" href=""><div class="project-tile"><img src="https://github.com/asuggs16/FCC-Projects/blob/main/FCC-Form.png?raw=true"><span class="item">Survey Form</span></div></a>
+          <a class="pj" href=""><div class="project-tile"><img src="https://github.com/asuggs16/FCC-Projects/blob/main/Screen%20Shot%202023-09-02%20at%206.16.07%20PM.png?raw=true"><span class="item">Product Landing Page</span></div></a>       </div>
+          <div class="col2">
+          <a class="pj" href=""><div class="project-tile"><img src="https://github.com/asuggs16/FCC-Projects/blob/main/Screen%20Shot%202023-09-02%20at%206.24.21%20PM.png?raw=true"><span class="item">City Skyline</span></div></a>
+          <a class="pj" href=""><div class="project-tile"><img src="https://github.com/asuggs16/FCC-Projects/blob/main/Screen%20Shot%202023-09-02%20at%206.15.02%20PM.png?raw=true"><span class="item">Technical Documentation Page</span></div></a>
+        </div>
+        </div>
+        </section>
+        <section id="contact">
+            <h1>Let's connect</h1>
+            <div class="fcclink"><a id="profile-link" target="_blank" href="https://www.freecodecamp.org/asuggs16"><i class="fab fa-free-code-camp fa-xl"></i><p>freeCodeCamp</p></div></a>
+        </section>
+        <footer>
+            <span>&copy asuggs16 for freeCodeCamp</span>
+        </footer>
+    </body>
+</html>
+
+
+:root{
+  --colorpurple: #6a5acd;
+  --colorgold: #ffa500;
+  --colorgray0: #f9f9f9;
+  --colorgray1: #f0f0f0;
+  --colorgray2: #b4b4b4;
+  --colorgray3: #787878;
+  --colorgray4: #616161;
+  --colorgray5: #3c3c3c;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--colorpurple);
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+}
+
+#navbar{
+  margin: auto 2rem;
+  display: flex;  
+}
+
+#navbar a{
+  padding: 1rem;
+  font-family: Open Sans;
+  color: var(--colorgray0);
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+#navbar a:hover{
+background-color: var(--colorgold);
+color: var(--colorpurple);
+}
+
+#welcome-section{
+  background-color: var(--colorgray5);
+text-align: center;
+height: 100vh;
+width: 100%;
+padding-top: 13rem;
+margin: auto;
+}
+
+#welcome-section h1{
+  color: var(--colorgray1);
+  font-family: Merriweather;
+  font-size: 60px;
+  padding: 1rem;
+}
+
+#welcome-section p{
+  color: var(--colorgold);
+  font-family: Open Sans;
+  font-size: 30px;
+  font-style: italic;
+  padding: 0 1rem 1rem 0;
+}
+
+.projectsh1{
+margin: auto;
+align-items: center;
+background-color: var(--colorgray2);
+text-align: center;
+padding: 2rem;
+color: var(--colorgray5);
+font-family: Merriweather;
+}
+ 
+#projects{
+  background-color: var(--colorgray2);
+  height: 180vh;
+  width: 100%;
+}
+
+.grid{
+display: grid;
+width: 90%;
+height: 80%;
+margin: auto;
+justify-content: space-between;
+grid-template-columns: 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.project-tile{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 25rem;
+  border: 1px solid;
+  align-items: center;
+  background-color: var(--colorpurple);
+  border-radius: 10px;
+  min-width: 400px;
+}
+  
+img{
+  height: 85%;
+  width: 100%; 
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.item{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 1.5rem;
+  color: var(--colorgray1);
+}
+
+.pj{
+  text-decoration: none;
+  padding: 1rem;
+}
+
+#contact{
+  height: 100vh;
+  width: 100%;
+  background-color: var(--colorgray4);
+}
+
+#contact h1{
+  font-family: Merriweather;
+  color: var(--colorgray1);
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 50px;
+}
+
+#contact p{
+text-align: center;
+font-size: 30px;
+font-family: Open Sans;
+color: var(--colorgold);
+}
+
+.fcclink{
+  margin: auto;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5rem;
+}
+
+.fcclink a{
+  text-decoration: none;
+  color: var(--colorgray1);
+}
+
+i{
+  color: var(colorgray1;)
+}
+
+footer{
+  text-align: right;
+  padding: 1rem;
+  color: var(--colorgold);
+  background-color: var(--colorpurple);
+  font-family: Open Sans;
+}
+
+@media (max-width: 600px) {
+  .grid{
+display: flex;
+width: 90%;
+margin: auto;
+justify-content: space-between;
+flex-wrap: wrap;
+padding: 1rem;
+  }
+
+#projects{
+  height: 350vh;
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+}
+}
+
+
+** end of undefined **
+
